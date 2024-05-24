@@ -1,0 +1,68 @@
+<html>
+<head>
+    <title>MR.sunil</title>
+    <style>
+        #AA
+        {
+             background-color: rgb(209, 237, 235); 
+            height: 30%;
+            border: 10px;
+            border-top: 40% solid red;
+            padding: 10px;
+            border-left: 10px solid  green;
+            border-right: 10px solid green;
+            margin-left: 35%;
+            margin-right: 35%;
+            text-align : center;
+            animation: fadeIn 1s ease-in-out;
+
+
+
+
+        }
+        #sub
+        {
+            background-color: lightgoldenrodyellow;
+            border: 2px solid black;
+        
+        
+        }
+        #H
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="AA">
+        <h1 id="H"> <i>Greeting received by Sunil </i> </h1>
+        
+        <form action="http://127.0.0.1:5500/home2.htm">
+            <label> NAME :</label>
+            <input type="text" placeholder="Please Enter your Name" id="myField" name="myField" required>
+            <br> <br> <br>
+            <input type="submit" value="Submit" id="submitButton" disabled onclick="validate()">
+            
+
+        </form>
+    </div>
+    <script>
+    
+        document.getElementById('myField').addEventListener('input', function() {
+          var field = document.getElementById('myField').value;
+          if (/^[a-zA-Z\s]+$/.test(field)) {
+            document.getElementById('submitButton').disabled = false;
+          } else {
+            document.getElementById('submitButton').disabled = true;
+          }
+        });
+        function validate()
+        {
+            window.location.href ="https://www.flipkart.com/";
+        }
+          
+      </script>
+</body>
+
+</html>
